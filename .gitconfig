@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Thusan Arul
+	email = thusan.arul@iterate.no
+# Please adapt and uncomment the following lines:
+#	name = Thusan Arul
+#	email = thusan.arul@iterate.no
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/thusanarul/.gitignore
+    editor = hx
+[alias]
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    cb = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(align:15)%(committerdate:relative)%(end) %(refname:short)' | fzf --preview 'git log main..{-1} --color=always' | awk '{print $NF}' | xargs git switch"
+    heat = "!git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -n 50"
+    sup = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
