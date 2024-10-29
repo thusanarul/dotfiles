@@ -22,8 +22,20 @@
     "bindings": {
       "w": "vim::NextSubwordStart",
       "b": "vim::PreviousSubwordStart",
-      "e": "vim::NextSubwordEnd",
+      // "e": "vim::NextSubwordEnd",
       "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "p": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "x": "editor::Cut"
     }
   }
 ]

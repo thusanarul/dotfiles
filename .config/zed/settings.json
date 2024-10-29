@@ -7,11 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "vim_mode": true,
-  "theme": "One Dark",
-  "base_keymap": "VSCode",
-  "buffer_font_size": 15,
-  "features": {
-    "copilot": false
-  }
+    "vim_mode": true,
+    "theme": "One Dark",
+    "base_keymap": "VSCode",
+    "buffer_font_size": 11,
+    "tab_size": 4,
+    "features": {
+        "copilot": false
+    },
+    "vim": {
+        "use_system_clipboard": "on_yank"
+    }
 }
