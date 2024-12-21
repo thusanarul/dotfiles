@@ -10,7 +10,9 @@
 [color]
     ui = true
 [alias]
-    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    fixup = "!git log -n 100 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
     cb = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(align:15)%(committerdate:relative)%(end) %(refname:short)' | fzf --preview 'git log main..{-1} --color=always' | awk '{print $NF}' | xargs git switch"
     heat = "!git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -n 100"
     sup = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+[tig]
+    tab-size = 4

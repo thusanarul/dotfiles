@@ -19,6 +19,9 @@ bind -M insert \cc kill-whole-line repaint
 # option+backspace deletes backward word
 bind -M insert \e\x7F backward-kill-word
 
+
 # direnv hook needs to be at the end of file 
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
+mise activate fish | source
+zoxide init fish | source

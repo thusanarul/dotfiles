@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:vim
 SETUVAR --export JAVA_HOME:Library/Java/JavaVirtualMachines/openjdk\x2d20\x2e0\x2e2/Contents/Home/
 SETUVAR --export PGRX_HOME:/Users/thusanarul/\x2epgrx/
 SETUVAR ZO_CMD:zo
@@ -53,4 +54,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dE6B450
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/usr/local/bin\x1e/Users/thusanarul/\x2edocker/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/opt/homebrew/opt/gnu\x2dsed/libexec/gnubin\x1e/Users/thusanarul/bin/\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/thusanarul/Library/pnpm\x1e/Users/thusanarul/Library/Python/3\x2e9/bin\x1e/usr/local/bin\x1e/Users/thusanarul/\x2edocker/bin\x1e/opt/homebrew/opt/llvm/bin\x1e/opt/homebrew/opt/gnu\x2dsed/libexec/gnubin\x1e/Users/thusanarul/bin/\x1e/opt/homebrew/bin

@@ -15,7 +15,8 @@
     "features": {
         "copilot": false
     },
+    "double_click_in_multibuffer": "open",
     "vim": {
-        "use_system_clipboard": "on_yank"
+        // "use_system_clipboard": "on_yank"
     }
 }
