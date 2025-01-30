@@ -6,6 +6,7 @@
     //     "ctrl-j": [workspace::activatepaneindirection", "right"]
     //   }
     // },
+
     {
         "context": "vim_mode == visual",
         "bindings": {
@@ -20,7 +21,10 @@
     {
         "context": "VimControl && !menu",
         "bindings": {
-            "space f": ["task::Spawn", { "task_name": "search:project" }]
+            "space f": [
+                "task::Spawn",
+                { "task_name": "search:project", "target": "center" }
+            ]
         }
     },
     {

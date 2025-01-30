@@ -4,10 +4,15 @@ end
 
 
 # https://sw.kovidgoyal.net/kitty/kittens/ssh/
-alias s="kitten ssh"
+alias ks="kitten ssh"
 # alias stunnel="s -N -R '30001:localhost:3000' thus@tunnel.arul.no"
 alias gpsup="git sup"
 
+# oddmunds handy abbr
+abbr --set-cursor='%' -- config '$EDITOR ~/.config/%'
+
+# lazygit
+abbr lg lazygit
 
 # Activates vi mode bindings for fish and rebinds ctrl+c to clear input line
 # https://fishshell.com/docs/current/cmds/bind.html#examples

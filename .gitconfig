@@ -6,7 +6,7 @@
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore
-    editor = vim
+    editor = nvim 
 [color]
     ui = true
 [alias]
