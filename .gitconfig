@@ -14,5 +14,13 @@
     cb = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(align:15)%(committerdate:relative)%(end) %(refname:short)' | fzf --preview 'git log main..{-1} --color=always' | awk '{print $NF}' | xargs git switch"
     heat = "!git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -n 100"
     sup = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+	next = stack next
+	prev = stack previous
+	reword = stack reword
+	amend = stack amend
+	sync = stack sync
+	run = stack run
 [tig]
     tab-size = 4
+[pull]
+	rebase = true

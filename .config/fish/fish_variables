@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:vim
+SETUVAR --export EDITOR:hx
 SETUVAR --export JAVA_HOME:Library/Java/JavaVirtualMachines/openjdk\x2d20\x2e0\x2e2/Contents/Home/
 SETUVAR --export PGRX_HOME:/Users/thusanarul/\x2epgrx/
 SETUVAR ZO_CMD:zo
