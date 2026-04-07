@@ -9,28 +9,24 @@
 {
     "context_servers": {
         "some-mcp-server": {
-            "source": "custom",
             "enabled": true,
             "command": "",
             "args": [],
-            "env": {}
+            "env": {},
         },
         "mcp-server-figma": {
-            "source": "extension",
             "enabled": true,
             "settings": {
-            }
-        }
     },
     "languages": {
         "TypeScript": {
-            "show_edit_predictions": true
+            "show_edit_predictions": true,
         },
         "Rust": {
-            "show_edit_predictions": true
+            "show_edit_predictions": true,
         },
         "JSON": {
-            "show_edit_predictions": true
+            "show_edit_predictions": true,
         },
         "Zig": {
             "formatter": "language_server",
@@ -45,9 +41,9 @@
                 // Run code actions that currently supports adding and removing discards.
                 "source.fixAll": true,
                 // Run code actions that sorts @import declarations.
-                "source.organizeImports": true
-            }
-        }
+                "source.organizeImports": true,
+            },
+        },
     },
     "lsp": {
         "zls": {
@@ -69,7 +65,7 @@
                 // "enable_build_on_save": true,
                 // omit the following line if `zig` is in your PATH
                 // "zig_exe_path": "/path/to/zig_executable"
-            }
+            },
         },
         "rust-analyzer": {
             "initialization_options": {
@@ -77,30 +73,31 @@
                 // which might include false-positives (those can be turned off by their names)
                 "diagnostics": {
                     "experimental": {
-                        "enable": true
-                    }
+                        "enable": true,
+                    },
                 },
                 // To disable the checking entirely
                 // (ignores all cargo and check settings below)
                 // "checkOnSave": false,
                 // To check the `lib` target only.
                 "cargo": {
-                    "allTargets": false
+                    "allTargets": false,
                 },
                 // Use `-p` instead of `--workspace` for cargo check
                 "check": {
-                    "workspace": false
-                }
-            }
-        }
+                    "workspace": false,
+                },
+            },
+        },
     },
     "edit_predictions": {
+        "provider": "zed",
         "mode": "subtle",
         "copilot": {
             "proxy": null,
-            "proxy_no_verify": null
+            "proxy_no_verify": null,
         },
-        "enabled_in_text_threads": false
+        "enabled_in_text_threads": false,
     },
     "vim_mode": true,
     "theme": "One Dark",
@@ -109,19 +106,22 @@
     "ui_font_size": 11,
     "tab_size": 4,
     "show_edit_predictions": true,
-    "features": {
-        "edit_prediction_provider": "zed"
-    },
     "agent": {
-        "default_profile": "write",
-        "default_model": {
+        "always_allow_tool_actions": true,
+        "inline_assistant_model": {
             "provider": "anthropic",
             "model": "claude-sonnet-4-5-latest"
         },
-        "model_parameters": []
+        "default_profile": "ask",
+        "default_model": {
+            "enable_thinking": false,
+            "provider": "anthropic",
+            "model": "claude-sonnet-4-6-latest",
+        },
+        "model_parameters": [],
     },
     "double_click_in_multibuffer": "open",
     "vim": {
         // "use_system_clipboard": "on_yank"
-    }
+    },
 }
