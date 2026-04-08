@@ -17,6 +17,10 @@ abbr lg lazygit
 # rustrover
 abbr rustrover open -na "RustRover.app" --args nosplash
 
+# global env variables
+set -gx EDITOR vim
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+
 # Activates vi mode bindings for fish and rebinds ctrl+c to clear input line
 # https://fishshell.com/docs/current/cmds/bind.html#examples
 # https://fishshell.com/docs/current/cmds/fish_vi_key_bindings.html
@@ -36,3 +40,4 @@ zoxide init fish | source
 # direnv hook needs to be at the end of file 
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
+export PATH="$HOME/.local/bin:$PATH"
