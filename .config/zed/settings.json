@@ -7,121 +7,123 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "context_servers": {
-        "some-mcp-server": {
-            "enabled": true,
-            "command": "",
-            "args": [],
-            "env": {},
-        },
-        "mcp-server-figma": {
-            "enabled": true,
-            "settings": {
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+  "context_servers": {
+    "some-mcp-server": {
+      "enabled": true,
+      "command": "",
+      "args": [],
+      "env": {},
     },
-    "languages": {
-        "TypeScript": {
-            "show_edit_predictions": true,
-        },
-        "Rust": {
-            "show_edit_predictions": true,
-        },
-        "JSON": {
-            "show_edit_predictions": true,
-        },
-        "Zig": {
-            "formatter": "language_server",
-            "show_edit_predictions": true,
-            // Formatting with ZLS matches `zig fmt`.
-            // The Zig FAQ answers some questions about `zig fmt`:
-            // https://github.com/ziglang/zig/wiki/FAQ
-            "format_on_save": "on",
-            // Make sure that zls is the primary language server
-            "language_servers": ["zls", "..."],
-            "code_actions_on_format": {
-                // Run code actions that currently supports adding and removing discards.
-                "source.fixAll": true,
-                // Run code actions that sorts @import declarations.
-                "source.organizeImports": true,
-            },
-        },
+  },
+  "languages": {
+    "TypeScript": {
+      "show_edit_predictions": true,
     },
-    "lsp": {
-        "zls": {
-            "binary": {
-                // omit the following line if `zls` is in your PATH
-                // "path": "/path/to/zls_executable"
-            },
-            // There are two ways to set config options:
-            //   - edit your `zls.json` that applies to any editor that uses ZLS
-            //   - set in-editor config options with the `settings` field below.
-            //
-            // Further information on how to configure ZLS:
-            // https://zigtools.org/zls/configure/
-            "settings": {
-                // Whether to enable build-on-save diagnostics
-                //
-                // Further information about build-on save:
-                // https://zigtools.org/zls/guides/build-on-save/
-                // "enable_build_on_save": true,
-                // omit the following line if `zig` is in your PATH
-                // "zig_exe_path": "/path/to/zig_executable"
-            },
-        },
-        "rust-analyzer": {
-            "initialization_options": {
-                // get more cargo-less diagnostics from rust-analyzer,
-                // which might include false-positives (those can be turned off by their names)
-                "diagnostics": {
-                    "experimental": {
-                        "enable": true,
-                    },
-                },
-                // To disable the checking entirely
-                // (ignores all cargo and check settings below)
-                // "checkOnSave": false,
-                // To check the `lib` target only.
-                "cargo": {
-                    "allTargets": false,
-                },
-                // Use `-p` instead of `--workspace` for cargo check
-                "check": {
-                    "workspace": false,
-                },
-            },
-        },
+    "Rust": {
+      "show_edit_predictions": true,
     },
-    "edit_predictions": {
-        "provider": "zed",
-        "mode": "subtle",
-        "copilot": {
-            "proxy": null,
-            "proxy_no_verify": null,
-        },
-        "enabled_in_text_threads": false,
+    "JSON": {
+      "show_edit_predictions": true,
     },
-    "vim_mode": true,
-    "theme": "One Dark",
-    "base_keymap": "VSCode",
-    "buffer_font_size": 11.0,
-    "ui_font_size": 11,
-    "tab_size": 4,
-    "show_edit_predictions": true,
-    "agent": {
-        "always_allow_tool_actions": true,
-        "inline_assistant_model": {
-            "provider": "anthropic",
-            "model": "claude-sonnet-4-5-latest"
-        },
-        "default_profile": "ask",
-        "default_model": {
-            "enable_thinking": false,
-            "provider": "anthropic",
-            "model": "claude-sonnet-4-6-latest",
-        },
-        "model_parameters": [],
+    "Zig": {
+      "formatter": "language_server",
+      "show_edit_predictions": true,
+      // Formatting with ZLS matches `zig fmt`.
+      // The Zig FAQ answers some questions about `zig fmt`:
+      // https://github.com/ziglang/zig/wiki/FAQ
+      "format_on_save": "on",
+      // Make sure that zls is the primary language server
+      "language_servers": ["zls", "..."],
+      "code_actions_on_format": {
+        // Run code actions that currently supports adding and removing discards.
+        "source.fixAll": true,
+        // Run code actions that sorts @import declarations.
+        "source.organizeImports": true,
+      },
     },
-    "double_click_in_multibuffer": "open",
-    "vim": {
-        // "use_system_clipboard": "on_yank"
+  },
+  "lsp": {
+    "zls": {
+      "binary": {
+        // omit the following line if `zls` is in your PATH
+        // "path": "/path/to/zls_executable"
+      },
+      // There are two ways to set config options:
+      //   - edit your `zls.json` that applies to any editor that uses ZLS
+      //   - set in-editor config options with the `settings` field below.
+      //
+      // Further information on how to configure ZLS:
+      // https://zigtools.org/zls/configure/
+      "settings": {
+        // Whether to enable build-on-save diagnostics
+        //
+        // Further information about build-on save:
+        // https://zigtools.org/zls/guides/build-on-save/
+        // "enable_build_on_save": true,
+        // omit the following line if `zig` is in your PATH
+        // "zig_exe_path": "/path/to/zig_executable"
+      },
     },
+    "rust-analyzer": {
+      "initialization_options": {
+        // get more cargo-less diagnostics from rust-analyzer,
+        // which might include false-positives (those can be turned off by their names)
+        "diagnostics": {
+          "experimental": {
+            "enable": true,
+          },
+        },
+        // To disable the checking entirely
+        // (ignores all cargo and check settings below)
+        // "checkOnSave": false,
+        // To check the `lib` target only.
+        "cargo": {
+          "allTargets": false,
+        },
+        // Use `-p` instead of `--workspace` for cargo check
+        "check": {
+          "workspace": false,
+        },
+      },
+    },
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+    },
+    "enabled_in_text_threads": false,
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_size": 11.0,
+  "ui_font_size": 11,
+  "tab_size": 4,
+  "show_edit_predictions": true,
+  "agent": {
+    "always_allow_tool_actions": true,
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest",
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "enable_thinking": false,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
+    },
+    "model_parameters": [],
+  },
+  "double_click_in_multibuffer": "open",
+  "vim": {
+    // "use_system_clipboard": "on_yank"
+  },
 }
