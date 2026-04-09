@@ -39,7 +39,7 @@
         //           "args": ["--login"]
         //         }
         //     }
-        "shell": "system"
+        "shell": "system",
     },
     {
         "label": "search:project",
@@ -51,7 +51,7 @@
         "reveal": "always",
         "hide": "on_success",
         "shell": {
-            "program": "/bin/zsh"
-        }
-    }
+            "program": "/bin/zsh",
+        },
+    },
 ]

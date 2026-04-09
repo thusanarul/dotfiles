@@ -7,14 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "auto_update": false,
     "agent_servers": {
         "claude-acp": {
-            "default_config_options": {
-                "mode": "plan"
-            },
-            "type": "registry"
-        }
+            "type": "registry",
+        },
     },
     "vim_mode": true,
     "icon_theme": "Zed (Default)",
@@ -24,7 +20,13 @@
         "dark": "One Dark",
     },
     "context_servers": {
+        "some-mcp-server": {
+            "enabled": true,
+            "command": "",
+            "args": [],
+            "env": {},
         },
+    },
     "languages": {
         "TypeScript": {
             "show_edit_predictions": true,
@@ -112,9 +114,7 @@
     "tab_size": 4,
     "show_edit_predictions": true,
     "agent": {
-        "tool_permissions": {
-            "default": "allow",
-        },
+        "always_allow_tool_actions": true,
         "inline_assistant_model": {
             "provider": "anthropic",
             "model": "claude-sonnet-4-5-latest",
