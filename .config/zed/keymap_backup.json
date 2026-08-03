@@ -1,38 +1,85 @@
 [
-    // {
     //   "context": "VimControl && !menu",
+    // {
     //   "bindings": {
     //     "ctrl-h": ["workspace::ActivatePaneInDirection", "left"],
     //     "ctrl-j": [workspace::activatepaneindirection", "right"]
     //   }
-    // },
+    // ,
+    {
+        "bindings": {
+            "cmd-h": "workspace::ActivatePreviousPane",
+            "cmd-shift-b": "workspace::ToggleLeftDock",
+        },
+    },
     {
         "context": "Workspace",
         "use_key_equivalents": true,
         "bindings": {
-            "alt-{": ["workspace::SwapPaneInDirection", "Left"],
-            "alt-}": ["workspace::SwapPaneInDirection", "Right"]
-        }
+            "cmd-[": "workspace::SwapPaneLeft",
+            "cmd-]": "workspace::SwapPaneRight",
+            "cmd-j": "debug_panel::ToggleFocus",
+            "cmd-h": "outline_panel::ToggleFocus",
+            "cmd-b": "project_panel::ToggleFocus",
+            "cmd-d": "debugger::Stop",
+            "cmd-r": "debugger::Rerun",
+
+            "cmd-k shift-h": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "left" },
+            ],
+            "cmd-k shift-j": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "down" },
+            ],
+            "cmd-k shift-k": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "up" },
+            ],
+            "cmd-k shift-l": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "right" },
+            ],
+        },
+    },
+    {
+        "context": "DebugPanel",
+        "bindings": {
+            "cmd-j": "workspace::ToggleBottomDock",
+            "cmd-d": "debugger::Stop",
+            "cmd-r": "debugger::Rerun",
+        },
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "cmd-d": "debugger::Stop",
+            "cmd-f": "terminal::SearchTest",
+            "esc": "terminal::ToggleViMode",
+        },
+    },
+    {
+        "context": "OutlinePanel",
+        "bindings": {
+            "cmd-=": "zed::IncreaseUiFontSize",
+            "cmd--": "zed::DecreaseUiFontSize",
+            "cmd-h": "workspace::ActivatePreviousPane",
+        },
     },
     {
         "context": "vim_mode == visual",
         "bindings": {
-            "shift-s": [
-                "vim::PushOperator",
-                {
-                    "AddSurrounds": {}
-                }
-            ]
-        }
+            "shift-s": "vim::PushAddSurrounds",
+        },
     },
     {
         "context": "VimControl && !menu",
         "bindings": {
             "space f": [
                 "task::Spawn",
-                { "task_name": "search:project", "target": "center" }
-            ]
-        }
+                { "task_name": "search:project", "target": "center" },
+            ],
+        },
     },
     {
         "context": "VimControl && !menu && vim_mode != operator",
@@ -40,28 +87,60 @@
             "w": ["vim::NextSubwordStart", { "ignore_punctuation": true }],
             // "b": ["vim::PreviousSubwordStart", { "ignorePunctuation": true }],
             // "e": "vim::NextSubwordEnd",
-            "g e": ["vim::PreviousSubwordEnd", { "ignore_punctuation": true }]
-        }
+            "g e": ["vim::PreviousSubwordEnd", { "ignore_punctuation": true }],
+        },
     },
+    { "context": "Editor && VimControl", "bindings": { "cmd-h": null } },
     {
         "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
         "bindings": {
             // "ctrl-shift-p": "editor::Paste",
             // "p": ["workspace::SendKeystrokes", "ctrl-shift-p"],
             "shift-j": "editor::MoveLineDown",
-            "shift-k": "editor::MoveLineUp"
+            "shift-k": "editor::MoveLineUp",
             // "ctrl-shift-d": ["vim::PushOperator", "Delete"],
             // "d": ["workspace::SendKeystrokes", "ctrl-shift-d"],
             // "d d": ["workspace::SendKeystrokes", "ctrl-shift-d d"],
             // "d i w": ["workspace::SendKeystrokes", "ctrl-shift-d i w"]
-        }
+            "ctrl-s": "editor::ShowSignatureHelp",
+            "cmd-[": "workspace::SwapPaneLeft",
+            "cmd-]": "workspace::SwapPaneRight",
+            "cmd-h": "outline_panel::ToggleFocus",
+            "cmd-b": "project_panel::ToggleFocus",
+        },
     },
     {
         "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
         "bindings": {
             "ctrl-shift-p": "vim::Paste",
             "p": ["workspace::SendKeystrokes", "\" _ ctrl-shift-p"],
-            "x": "editor::Cut"
-        }
-    }
+            "x": "editor::Cut",
+        },
+    },
+    {
+        "context": "Editor && edit_prediction",
+        "bindings": {
+            "alt-tab": null,
+            // Here we also allow `alt-enter` to accept the prediction
+            "alt-enter": "editor::AcceptEditPrediction",
+        },
+    },
+    {
+        "context": "Editor && edit_prediction_conflict",
+        "bindings": {
+            "ctrl-enter": "editor::AcceptEditPrediction", // Example of a modified keybinding
+        },
+    },
+    {
+        "context": "vim_mode == normal",
+        "bindings": {
+            "ctrl-k": "assistant::InlineAssist",
+        },
+    },
+    {
+        "context": "vim_mode == normal",
+        "bindings": {
+            "ctrl-l": "editor::ShowEditPrediction",
+        },
+    },
 ]

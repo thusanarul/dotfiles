@@ -5,7 +5,7 @@
 [init]
 	defaultBranch = main
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore-omni
     editor = nvim 
 [color]
     ui = true
@@ -24,3 +24,8 @@
     tab-size = 4
 [pull]
 	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

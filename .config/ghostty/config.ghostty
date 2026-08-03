@@ -1,4 +1,7 @@
 macos-titlebar-style="tabs"
 # Disable Ghostty built-in tab title shell integration
 # https://ghostty.org/docs/config/reference#shell-integration-features
-shell-integration-features = no-title
+shell-integration-features = ssh-terminfo,ssh-env,no-title, sudo
+
+clipboard-read = allow
+clipboard-write = allow

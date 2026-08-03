@@ -14,6 +14,9 @@ abbr --set-cursor='%' -- config '$EDITOR ~/.config/%'
 # lazygit
 abbr lg lazygit
 
+# lazy list al
+abbr ll ls -al
+
 # rustrover
 abbr rustrover open -na "RustRover.app" --args nosplash
 

@@ -7,11 +7,26 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "auto_update": false,
+    "cli_default_open_behavior": "new_window",
+    "project_panel": {
+        "dock": "left"
+    },
+    "outline_panel": {
+        "dock": "left"
+    },
+    "collaboration_panel": {
+        "dock": "left"
+    },
+    "git_panel": {
+        "dock": "left",
+        "tree_view": true
+    },
+    "auto_update": true,
     "agent_servers": {
         "claude-acp": {
             "default_config_options": {
-                "mode": "plan"
+                "model": "default",
+                "mode": "default"
             },
             "type": "registry"
         }
@@ -112,6 +127,7 @@
     "tab_size": 4,
     "show_edit_predictions": true,
     "agent": {
+        "dock": "right",
         "tool_permissions": {
             "default": "allow",
         },
@@ -130,5 +146,6 @@
     "double_click_in_multibuffer": "open",
     "vim": {
         // "use_system_clipboard": "on_yank"
+        "toggle_relative_line_numbers": true
     },
 }

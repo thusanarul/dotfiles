@@ -4,3 +4,5 @@ git:
     args: "--no-ff"
   pagers:
     - externalDiffCommand: difft --color=always --display=inline --syntax-highlight=off
+
+
