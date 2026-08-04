@@ -2,7 +2,6 @@ git:
   # branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
   merging:
     args: "--no-ff"
-  pagers:
-    - externalDiffCommand: difft --color=always --display=inline --syntax-highlight=off
-
-
+  diffRenderers:
+    - command: difft --color=always --display=inline --syntax-highlight=off
+      type: extDiff

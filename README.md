@@ -16,6 +16,8 @@ reference to how to use GNU Stow: https://tamerlan.dev/how-i-manage-my-dotfiles-
 - zellij (want to try out more)
 - bat (standard config)
 - btop (standard config)
+- lazygit
+- difftastic
 - ... other stuff (see midio-mac-april-brews.txt for latest)
 
 ## macOS specific apps
@@ -23,7 +25,7 @@ reference to how to use GNU Stow: https://tamerlan.dev/how-i-manage-my-dotfiles-
 - Karabiner-Elements: for keybindings. mainly just shift+hjkl for arrows on laptop keyboard
 - Stats: system monitor in the menu bar
 - AlDente: to limit charging to 80%. could maybe do this some other way
-- Logi Option+: for managing the external mouse
+- Logi Option+: for managing the external mouse (optional)
 - Alfred: App launcher
 
 ### Other macOS specifc stuff
